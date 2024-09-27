@@ -1,0 +1,327 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(90deg, #00BCD4 0%, #8BC34A 46%, #00BCD4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #00122f;
+  font-family: "Arimo", Arial, Helvetica, sans-serif;
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+  color: #00122f;
+  font-family: "Lato";
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #00122f;
+  font-family: "Lato";
+  font-size: 26px;
+}
+
+
+.container {
+  width: 100%; /* Make it responsive */
+  max-width: 1200px; /* Set a max width */
+  margin: 0 auto; /* Center the container */
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 10 10 10px rgba(1, 5, 10, 0.1);
+}
+
+button {
+  margin: 10px;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+button:disabled {
+  background-color: #a08484;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+nav img {
+  border-radius: 60px;
+  width: 120px;
+  padding: 2px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #0768eb;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+.btn:focus,
+select:focus {
+  outline: 0;
+}
+
+.btn-toggle {
+  display: block;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.text-box {
+  width: 82%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  background-color: #00122f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: all 0.8s ease-in-out;
+}
+
+.text-box.show {
+  transform: translate(-50%, 0);
+  visibility: visible;
+}
+
+.text-box select {
+  background-color: #0768eb;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+}
+
+.text-box textarea {
+  border: 1px #dadada solid;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 15px 0;
+  width: 100%;
+  height: 150px;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.text-box .close {
+  float: right;
+  text-align: right;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.box {
+  background-color: #edf5ff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px #5d9bec;
+}
+
+.box img {
+  width: 100%;
+  object-fit: contain;
+  height: 200px;
+}
+
+.box .info {
+  background-color: #0768eb;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add styling for description-section */
+.text-section {
+  margin-top: 40px; /* Adds space between the main content and the description */
+  padding: 30px;
+  background-color: #f5f5f5; /* Optional background for distinction */
+  text-align: center;
+}
+
+.text-section h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Override browser-specific underline for anchor links */
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherit color from parent elements */
+}
+
+a:hover, a:focus {
+    text-decoration: none; /* Ensures no underline on hover or focus */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #00122f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 250px; /* Prevent sections from shrinking too small */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #000;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center sections horizontally */
+    }
+
+    .footer-section {
+        flex: none; /* Remove flex-grow */
+        width: 100%; /* Full width for mobile */
+        max-width: 500px; /* Optional: Control max width of each section */
+        margin-bottom: 20px; /* Add space between stacked sections */
+        text-align: center; /* Center text for mobile */
+    }
+    
+    .footer-section h4 {
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+
+    .footer-section p, 
+    .footer-section ul {
+        font-size: 13px; /* Slightly smaller text for mobile */
+    }
+}

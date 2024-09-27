@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+    <!-- Title -->
+    <title>Voice to Text Converter - Convert Speech to Text instantly</title>
+
+    <!-- SEO Description -->
+    <meta name="description" content="Transform your voice into text effortlessly with our Voice to Text Converter. Start recording now and get accurate transcriptions in real-time.">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://textreader.online/voice-to-text.html">
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DF4J6HY391"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DF4J6HY391');
+    </script>
+</head>
+<body>
+    <div class="container">
+<nav style="display: flex; justify-content: center; align-items: center; padding: 10px;">
+    <a href="https://textreader.online/">
+        <img src="img/textreader.png" alt="Logo" width="150" height="100" style="margin-right: 20px;">
+    </a>
+    <!-- Menu -->
+    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; font-weight: 600;">
+        <li style="margin-left: 20px;"><a href="/">Text to Speech</a></li>
+        <li style="margin-left: 20px;"><a href="/voice-to-text.html">Speech to Text</a></li>
+    </ul>
+</nav>
+<!-- Simple Dotted Line Separator -->
+<div class="dotted-separator">
+    <svg height="20" width="100%">
+        <line x1="0" y1="10" x2="100%" y2="10" stroke="#00122f" stroke-width="2" stroke-dasharray="4 4" />
+    </svg>
+</div>
+
+        <h1>Voice to Text Converter</h1>
+        <button id="start-record-btn">Start Recording</button>
+        <button id="stop-record-btn" disabled>Stop Recording</button>
+        <p id="status"></p>
+        <textarea id="transcript" rows="10" cols="50" placeholder="Your transcribed text will appear here..."></textarea>
+		<button id="copy-btn" class="btn">Copy All Text</button>
+        <button id="clear-btn" class="btn">Clear All Text</button>
+
+        <!-- Description Section right after the main content -->
+        <div class="text-section">
+            <h2>Voice to Text Converter</h2>
+            <p>Voice to text converter is an online tool to transform voice or speech to text in real time. It supports all kinds of languages.</p>
+        </div>
+				<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>This is a simple online text-to-speech and speech-to-text converter web app designed to provide a fast, efficient and real time solution for those in need.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/voice-to-text.html">Speech to Text</a></li>
+                <li><a href="/">Text to Speech</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: admin@textreader.online</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Text Reader Online | All Rights Reserved</p>
+    </div>
+</footer>
+    </div>
+
+    <script src="script.js"></script>
+	 <script>
+        // Function to copy all text from the textarea
+        document.getElementById('copy-btn').addEventListener('click', function() {
+            const transcript = document.getElementById('transcript');
+            transcript.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+        });
+
+        // Function to clear all text from the textarea
+        document.getElementById('clear-btn').addEventListener('click', function() {
+            document.getElementById('transcript').value = '';
+            alert('Text cleared!');
+        });
+    </script>
+</body>
+
+</html>
